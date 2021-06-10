@@ -1,0 +1,24 @@
+{
+  "name": "design-token",
+  "version": "0.0.1",
+  "description": "denations design token",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smatoos/denations-ui.git",
+    "directory": "packages/design-token"
+  },
+  "author": "snowjang24 <asdka4618@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "tap",
+    "build": "microbundle && node ./export-css.js",
+    "dev": "microbundle watch",
+    "prepack": "yarn build"
+  },
+  "files": [
+    "src",
+    "lib"
+  ]
+}
