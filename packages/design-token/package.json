@@ -9,11 +9,6 @@
     "url": "git+https://github.com/smatoos/denations-ui",
     "directory": "packages/design-token"
   },
-  "scripts": {
-    "build": "microbundle && node ./export-css.js",
-    "dev": "microbundle watch",
-    "prepack": "yarn build"
-  },
   "publishConfig": {
     "access": "public",
     "source": "./src/index.ts",
@@ -32,11 +27,19 @@
       "./package.json": "./package.json"
     }
   },
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "prepack": "yarn build",
+    "convert": "style-dictionary build --config ./sdconfig.js"
+  },
   "files": [
     "src",
     "lib"
   ],
   "devDependencies": {
-    "microbundle": "^0.13.3"
+    "microbundle": "^0.13.1",
+    "style-dictionary": "^3.0.1",
+    "typescript": "^4.3.2"
   }
 }
