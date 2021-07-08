@@ -1,42 +1,30 @@
 {
   "name": "@denations/design-token",
   "amdName": "denationsDesignToken",
-  "version": "0.0.1",
+  "version": "0.0.47",
   "sideEffects": false,
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/smatoos/denations-ui",
     "directory": "packages/design-token"
   },
   "scripts": {
-    "build": "microbundle && node ./export-css.js",
-    "dev": "microbundle watch",
-    "prepack": "yarn build"
-  },
-  "publishConfig": {
-    "access": "public",
-    "source": "./src/index.ts",
-    "types": "./lib/index.d.ts",
-    "main": "./lib/index.js",
-    "module": "./lib/index.module.js",
-    "unpkg": "./lib/index.umd.js",
-    "exports": {
-      ".": {
-        "require": "./lib/index.js",
-        "import": "./lib/index.modern.js"
-      },
-      "./colors/light.css": "./lib/colors/light.css",
-      "./colors/dark.css": "./lib/colors/dark.css",
-      "./colors/system.css": "./lib/colors/system.css",
-      "./package.json": "./package.json"
-    }
+    "convert": "style-dictionary build --config tokens/config.js",
+    "build": "tsc",
+    "build:check": "tsc --noEmit",
+    "prepack": "yarn build",
+    "clean": "rm -rf dist"
   },
   "files": [
-    "src",
-    "lib"
+    "dist"
   ],
   "devDependencies": {
-    "microbundle": "^0.13.3"
+    "@types/node": "^16.0.0",
+    "microbundle": "^0.13.1",
+    "style-dictionary": "^3.0.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
   }
 }
