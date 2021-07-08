@@ -1,10 +1,17 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./lib",
+    "rootDir": "lib",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "lib": ["es6", "es2015"],
+    "types": ["node"],
+    "baseUrl": "./",
     "declaration": true,
-    "declarationDir": "./lib"
+    "declarationDir": "dist",
+    "allowJs": true
   },
-  "include": ["src/**/*"]
+  "exclude": ["dist", "tokens", "node_modules", "dist/**/*.spec.ts"],
+  "include": ["lib/**/*"]
 }
