@@ -1,0 +1,23 @@
+{
+  "name": "@denations/components",
+  "amdName": "denationsComponents",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smatoos/components",
+    "directory": "packages/components"
+  },
+  "scripts": {
+    "convert": "style-dictionary build --config tokens/config.js",
+    "build": "tsc",
+    "build:check": "tsc --noEmit",
+    "prepack": "yarn build",
+    "clean": "rm -rf dist"
+  },
+  "files": [
+    "dist"
+  ]
+}
