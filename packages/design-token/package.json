@@ -12,7 +12,7 @@
   },
   "scripts": {
     "convert": "style-dictionary build --config tokens/config.js",
-    "build": "tsc",
+    "build": "yarn convert && tsc",
     "build:check": "tsc --noEmit",
     "prepack": "yarn build",
     "clean": "rm -rf dist"
