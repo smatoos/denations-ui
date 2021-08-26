@@ -1,13 +1,13 @@
 {
-  "name": "@denations/theme-styled-components",
-  "amdName": "denationsThemeStyledComponents",
+  "name": "@denations/components",
+  "amdName": "denationsComponents",
   "version": "0.0.1",
   "sideEffects": false,
   "main": "./src/index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/smatoos/denations-ui",
-    "directory": "packages/theme-styled-components"
+    "directory": "packages/components"
   },
   "publishConfig": {
     "access": "public",
@@ -18,8 +18,8 @@
     "types": "./lib/index.d.ts"
   },
   "scripts": {
-    "build": "microbundle --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx,@denations-ui/design-token=denationsDesignToken",
-    "dev": "microbundle dev --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx,@denations-ui/design-token=denationsDesignToken",
+    "build": "microbundle --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx,@denations-ui/design-token=denationsDesignToken,@denations-ui/theme-styled-components-token=themeStyledComponents",
+    "dev": "microbundle dev --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx,@denations-ui/design-token=denationsDesignToken,@denations-ui/theme-styled-components-token=themeStyledComponents",
     "prepack": "yarn build"
   },
   "files": [
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@denations/design-token": "workspace:packages/design-token",
+    "@denations/theme-styled-components": "workspace:packages/theme-styled-components",
     "@types/react": "^17.0.14",
     "@types/styled-components": "^5.1.11",
     "microbundle": "^0.13.3",
