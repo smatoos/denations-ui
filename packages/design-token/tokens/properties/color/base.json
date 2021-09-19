@@ -1,62 +1,62 @@
 {
   "color": {
-    "white": { "value": "#fff" },
-    "black": { "value": "#000" },
+    "white": { "type": "color", "value": "#fff" },
+    "black": { "type": "color", "value": "#000" },
     "gray": {
-      "50": { "value": "#eaedf3" },
-      "100": { "value": "#ccd2dd" },
-      "200": { "value": "#adb5c3" },
-      "300": { "value": "#8d97aa" },
-      "400": { "value": "#768197" },
-      "500": { "value": "#5f6d85" },
-      "600": { "value": "#525f74" },
-      "700": { "value": "#414c5e" },
-      "800": { "value": "#323a49" },
-      "900": { "value": "#202632" }
+      "50": { "type": "color", "value": "#eaedf340" },
+      "100": { "type": "color", "value": "#ccd2dd" },
+      "200": { "type": "color", "value": "#adb5c3" },
+      "300": { "type": "color", "value": "#8d97aa" },
+      "400": { "type": "color", "value": "#768197" },
+      "500": { "type": "color", "value": "#5f6d85" },
+      "600": { "type": "color", "value": "#525f74" },
+      "700": { "type": "color", "value": "#414c5e" },
+      "800": { "type": "color", "value": "#323a49" },
+      "900": { "type": "color", "value": "#202632" }
     },
     "blueBlack": {
-      "50": { "value": "#70737e" },
-      "100": { "value": "#595c68" },
-      "200": { "value": "#414553" },
-      "300": { "value": "#292e3d" },
-      "400": { "value": "#121728" },
-      "500": { "value": "#101424" },
-      "600": { "value": "#0e1220" },
-      "700": { "value": "#0c101c" },
-      "800": { "value": "#0a0d18" },
-      "900": { "value": "#090b14" }
+      "50": { "type": "color", "value": "#70737e" },
+      "100": { "type": "color", "value": "#595c68" },
+      "200": { "type": "color", "value": "#414553" },
+      "300": { "type": "color", "value": "#292e3d" },
+      "400": { "type": "color", "value": "#121728" },
+      "500": { "type": "color", "value": "#101424" },
+      "600": { "type": "color", "value": "#0e1220" },
+      "700": { "type": "color", "value": "#0c101c" },
+      "800": { "type": "color", "value": "#0a0d18" },
+      "900": { "type": "color", "value": "#090b14" }
     },
     "primary": {
-      "50": { "value": "#d8fff7" },
-      "100": { "value": "#9affe8" },
-      "200": { "value": "#00ffd9" },
-      "300": { "value": "#00f9c7" },
-      "400": { "value": "#00f0b8" },
-      "500": { "value": "#00e7ab" },
-      "600": { "value": "#00d79b" },
-      "700": { "value": "#00c388" },
-      "800": { "value": "#00b278" },
-      "900": { "value": "#009257" }
+      "50": { "type": "color", "value": "#d8fff7" },
+      "100": { "type": "color", "value": "#9affe8" },
+      "200": { "type": "color", "value": "#00ffd9" },
+      "300": { "type": "color", "value": "#00f9c7" },
+      "400": { "type": "color", "value": "#00f0b8" },
+      "500": { "type": "color", "value": "#00e7ab" },
+      "600": { "type": "color", "value": "#00d79b" },
+      "700": { "type": "color", "value": "#00c388" },
+      "800": { "type": "color", "value": "#00b278" },
+      "900": { "type": "color", "value": "#009257" }
     },
     "yellow": {
-      "50": { "value": "#fff8df" },
-      "500": { "value": "#ffc700" },
-      "800": { "value": "#ff8a00" }
+      "50": { "type": "color", "value": "#fff8df" },
+      "500": { "type": "color", "value": "#ffc700" },
+      "800": { "type": "color", "value": "#ff8a00" }
     },
     "green": {
-      "50": { "value": "#e7f7eb" },
-      "500": { "value": "#2bbd5f" },
-      "800": { "value": "#01893d" }
+      "50": { "type": "color", "value": "#e7f7eb" },
+      "500": { "type": "color", "value": "#2bbd5f" },
+      "800": { "type": "color", "value": "#01893d" }
     },
     "red": {
-      "50": { "value": "#ffe5ea" },
-      "500": { "value": "#ff4b6c" },
-      "800": { "value": "#c21e4d" }
+      "50": { "type": "color", "value": "#ffe5ea" },
+      "500": { "type": "color", "value": "#ff4b6c" },
+      "800": { "type": "color", "value": "#c21e4d" }
     },
     "blue": {
-      "50": { "value": "#e2f2ff" },
-      "500": { "value": "#0094fe" },
-      "800": { "value": "#0d62ca" }
+      "50": { "type": "color", "value": "#e2f2ff" },
+      "500": { "type": "color", "value": "#0094fe" },
+      "800": { "type": "color", "value": "#0d62ca" }
     }
   }
 }

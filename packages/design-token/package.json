@@ -11,8 +11,8 @@
     "directory": "packages/design-token"
   },
   "scripts": {
-    "convert": "style-dictionary build --config tokens/config.js",
-    "build": "yarn convert && tsc",
+    "generate": "style-dictionary build --config tokens/config.js",
+    "build": "yarn generate && tsc",
     "build:check": "tsc --noEmit",
     "prepack": "yarn build",
     "clean": "rm -rf dist"
@@ -22,6 +22,7 @@
   ],
   "devDependencies": {
     "@types/node": "^16.0.0",
+    "json-to-ts": "^1.7.0",
     "microbundle": "^0.13.1",
     "style-dictionary": "^3.0.1",
     "ts-node": "^10.0.0",
