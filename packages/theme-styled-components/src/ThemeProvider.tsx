@@ -1,7 +1,13 @@
-import * as React from "react";
-import {
-  ThemeProvider as StyledComponentsThemeProvider,
-  createGlobalStyle,
-} from "styled-components";
+import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components";
 
-import {color} from '@denations/design-token'
+export default function ThemeProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <StyledComponentsThemeProvider theme={""}>
+      {children}
+    </StyledComponentsThemeProvider>
+  );
+}
