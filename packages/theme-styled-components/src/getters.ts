@@ -1,17 +1,24 @@
-import { ColorScale, ColorVariant } from "@denations/design-token/lib/types";
+// getters.ts
+
+import {
+  Colors,
+  ColorScale,
+  KnownColorVariant,
+  MinColorScale,
+  MinColorVariant,
+  MonoColorVariant,
+} from "@denations/design-token/lib/tokens/color";
 import defaultTheme, { ThemeProps } from "./theme";
 
-export function getTheme(props: ThemeProps) {
+// utility function to fallback to `defaultTheme` when necessary
+function getTheme(props: ThemeProps) {
   return props.theme && props.theme.colors ? props.theme : defaultTheme;
 }
 
 export function getColor(
-  variant: ColorVariant,
-  scale: ColorScale,
+  type: KnownColorVariant,
+  index: ColorScale,
   props: ThemeProps
 ) {
-  const { colors } = getTheme(props);
-  if (colors.primary) {
-    colors.primary[10];
-  }
+  const colors = getTheme(props).colors.dark;
 }

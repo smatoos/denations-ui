@@ -1,5 +1,7 @@
-import { ColorHSLA, ShadowValues, SizeUnit } from "./types";
 import tColor from "tinycolor2";
+import { ColorHSLA } from "./tokens/color";
+import { ShadowValues } from "./tokens/depth";
+import { SizeUnit } from "./tokens/size";
 
 export const getHsla = ({ h, s, l, a }: ColorHSLA) => {
   const colorObj = tColor({ h, s: s / 100, l: l / 100 });

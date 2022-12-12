@@ -1,7 +1,47 @@
-import { Colors, ColorTheme } from "../types";
+export type ColorString = string;
+export type ColorHSLA = { h: number; s: number; l: number; a?: number };
+export type Color = ColorString | ColorHSLA;
+export type ColorScale =
+  | 10 // darker shade 1
+  | 20 // darker shade 2
+  | 30 // darker shade 3
+  | 40 // darker shade 4
+  | 50 // original shade
+  | 60 // lighter shade 1
+  | 70 // lighter shade 2
+  | 80 // lighter shade 3
+  | 90; // lighter shade 4
+export type ColorVariant =
+  | "white"
+  | "black"
+  | "gray"
+  | "primary"
+  | "secondary"
+  | "info"
+  | "success"
+  | "warning"
+  | "error"
+  | "blueBlack"
+  | "blueGray";
+export type ColorThemeVariant = "light" | "dark";
+
+export type MinColorScale = 20 | 50 | 80;
+export type MonoColorVariant = "white" | "black";
+export type MinColorVariant = "info" | "success" | "warning" | "error";
+
+export type ColorWithScale<T> = Record<
+  T extends MinColorVariant ? MinColorScale : ColorScale,
+  Color
+>;
+
+export type Colors<T, P> = {
+  [K in ColorVariant]: K extends T
+    ? Color
+    : ColorWithScale<K extends P ? P : ColorVariant>;
+};
 
 // Colors
-const darkColors: Colors = {
+const darkColors = {
   white: { h: 0, s: 0, l: 100 },
   black: { h: 0, s: 0, l: 0 },
   gray: {
@@ -70,6 +110,12 @@ const darkColors: Colors = {
   },
 };
 
-export const colors: ColorTheme = {
-  dark: darkColors,
+export type KnownColorVariant = keyof typeof darkColors;
+
+export const colors = {
+  dark: darkColors as Pick<
+    Colors<MonoColorVariant, MinColorVariant>,
+    KnownColorVariant
+  >,
 };
+export type ColorTheme = typeof colors;

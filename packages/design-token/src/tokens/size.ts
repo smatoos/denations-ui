@@ -1,6 +1,31 @@
-import { Breakpoints, SizeTheme } from "../types";
+// Type of Sizes
+export type Size = string | number;
+export type SizeUnit =
+  | "px"
+  | "%"
+  | "rem"
+  | "em"
+  | "vh"
+  | "vw"
+  | "vmin"
+  | "vmax";
 
-export const sizes: SizeTheme = {
+export interface SizeWithUnit {
+  size: Size;
+  unit: SizeUnit;
+}
+export type SizeVariant = "font" | "border" | "spacing" | "form";
+export type SizeIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+export type SemanticSizeIndex =
+  | "xxs"
+  | "xs"
+  | "sm"
+  | "md"
+  | "lg"
+  | "xl"
+  | "xxl";
+
+export const sizes = {
   font: {
     0: {
       size: 0.875, //14
@@ -64,7 +89,7 @@ export const sizes: SizeTheme = {
   },
 };
 
-export const breakpoints: Breakpoints = {
+export const breakpoints = {
   xs: 475,
   sm: 576,
   md: 768,
@@ -72,3 +97,6 @@ export const breakpoints: Breakpoints = {
   xl: 1200,
   xxl: 1440,
 };
+
+export type Sizes = typeof sizes;
+export type Breakpoints = typeof breakpoints;

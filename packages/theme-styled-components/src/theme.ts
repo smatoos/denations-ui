@@ -2,7 +2,7 @@ import { color, font, size, depth } from "@denations/design-token";
 
 const theme = {
   colors: {
-    ...color.colors.dark,
+    ...color.colors,
   },
   ...size,
   ...depth,
